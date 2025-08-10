@@ -64,9 +64,9 @@ form {
   }
   .resume-summary {
     @apply flex flex-row items-center justify-center p-4 gap-4;
-    .category {
-      @apply flex flex-row gap-2 items-center bg-gray-50 rounded-2xl p-4 w-full justify-between;
-    }
+  }
+  .resume-summary .category {
+    @apply flex flex-row gap-2 items-center bg-gray-50 rounded-2xl p-4 w-full justify-between;
   }
   .back-button {
     @apply flex flex-row items-center gap-2 border border-gray-200 rounded-lg p-2 shadow-sm;
@@ -75,7 +75,7 @@ form {
     @apply primary-gradient rounded-full py-4 px-8 cursor-pointer w-[600px] max-md:w-full text-3xl font-semibold text-white;
   }
   .main-section {
-    @apply flex flex-col items-center gap-8 pt-12 max-sm:mx-2 mx-15 pb-5;
+    @apply flex flex-col items-center gap-8 pt-12 max-sm:mx-2 mx-16 pb-5;
   }
   .page-heading {
     @apply flex flex-col items-center gap-8 max-w-4xl text-center max-sm:gap-4;
@@ -116,30 +116,27 @@ form {
   }
 }
 
-@utility bg-gradient {
-  background: linear-gradient(to bottom, #f0f4ff 60%, #fa7185cc);
-}
-
-@utility text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#AB8C95] via-[#000000] to-[#8E97C5];
-}
-
-@utility gradient-hover {
-  @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200;
-}
-
-@utility primary-gradient {
-  background: linear-gradient(to bottom, #8e98ff, #606beb);
-  box-shadow: 0px 74px 21px 0px #6678ef00;
-}
-
-@utility primary-gradient-hover {
-  background: linear-gradient(to bottom, #717dff, #4957eb);
-}
-
-@utility inset-shadow {
-  box-shadow: inset 0 0 12px 0 rgba(36, 99, 235, 0.2);
-  backdrop-filter: blur(10px);
+@layer utilities {
+  .bg-gradient {
+    background: linear-gradient(to bottom, #f0f4ff 60%, #fa7185cc);
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#AB8C95] via-[#000000] to-[#8E97C5];
+  }
+  .gradient-hover {
+    @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200;
+  }
+  .primary-gradient {
+    background: linear-gradient(to bottom, #8e98ff, #606beb);
+    box-shadow: 0px 74px 21px 0px #6678ef00;
+  }
+  .primary-gradient-hover {
+    background: linear-gradient(to bottom, #717dff, #4957eb);
+  }
+  .inset-shadow {
+    box-shadow: inset 0 0 12px 0 rgba(36, 99, 235, 0.2);
+    backdrop-filter: blur(10px);
+  }
 }
 
 @keyframes fadeIn {
